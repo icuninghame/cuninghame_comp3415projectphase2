@@ -2,7 +2,7 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com
 
-package cuninghame.comp3415projectphase2.ocsf.server;
+package comp3415.cuninghame.ocsf.server;
 
 import java.io.*;
 import java.net.*;
@@ -57,7 +57,7 @@ public class ConnectionToClient extends Thread {
 	private boolean				readyToStop;
 
 	/**
-	 * Map to save information about the cuninghame.comp3415projectphase1.client such as its login ID. The
+	 * Map to save information about the cuninghame.comp3415projectphase1.client such as its loginUser ID. The
 	 * initial size of the map is small since it is not expected that concrete
 	 * servers will want to store many different types of information about each
 	 * cuninghame.comp3415projectphase1.client. Used by the setInfo and getInfo methods.

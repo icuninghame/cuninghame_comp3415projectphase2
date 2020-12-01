@@ -2,7 +2,7 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com
 
-package cuninghame.comp3415projectphase2.ocsf.server;
+package comp3415.cuninghame.ocsf.server;
 
 /**
 * The <code> ObservableOriginatorServer </code> is a subclass
@@ -19,7 +19,7 @@ package cuninghame.comp3415projectphase2.ocsf.server;
 * @author Fran&ccedil;ois B&eacute;langer
 * @author Paul Holden
 * @version February 2001 (2.12)
-* @see cuninghame.comp3415projectphase1.ocsf.server.OriginatorMessage
+* @see OriginatorMessage
 */
 public class ObservableOriginatorServer extends ObservableServer
 {
@@ -38,13 +38,13 @@ public class ObservableOriginatorServer extends ObservableServer
   // Instance methods ************************************************
   
   /**
-   * This method is used to handle messages coming from the cuninghame.comp3415projectphase1.client.
+   * This method is used to handle messages coming from the comp3415.cuninghame.client.
    * Observers are notfied by receiveing an instance of OriginatorMessage
    * that contains both the message received and a reference to the
-   * cuninghame.comp3415projectphase1.client who sent the message.
+   * comp3415.cuninghame.client who sent the message.
    *
-   * @param message The message received from the cuninghame.comp3415projectphase1.client.
-   * @param client The connection to the cuninghame.comp3415projectphase1.client.
+   * @param message The message received from the comp3415.cuninghame.client.
+   * @param client The connection to the comp3415.cuninghame.client.
    */
   protected synchronized void handleMessageFromClient
     (Object message, ConnectionToClient client)
@@ -54,13 +54,13 @@ public class ObservableOriginatorServer extends ObservableServer
   }
 
   /**
-   * Method called each time a new cuninghame.comp3415projectphase1.client connection is
+   * Method called each time a new comp3415.cuninghame.client connection is
    * accepted. It notifies observers by sending an
    * <code> OriginatorMessage </code> instance
-   * containing a reference to that cuninghame.comp3415projectphase1.client and
+   * containing a reference to that comp3415.cuninghame.client and
    * the message defined by the static variable CLIENT_CONNECTED.
    *
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client.
+   * @param client the connection connected to the comp3415.cuninghame.client.
    */
   protected synchronized void clientConnected(ConnectionToClient client)
   {
@@ -69,13 +69,13 @@ public class ObservableOriginatorServer extends ObservableServer
   }
 
   /**
-   * Method called each time a cuninghame.comp3415projectphase1.client connection is
+   * Method called each time a comp3415.cuninghame.client connection is
    * disconnected. It notifies observers by sending an
    * <code> OriginatorMessage </code> instance
-   * containing a reference to that cuninghame.comp3415projectphase1.client and
+   * containing a reference to that comp3415.cuninghame.client and
    * the message defined by the static variable CLIENT_DISCONNECTED.
    *
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client.
+   * @param client the connection connected to the comp3415.cuninghame.client.
    */
   synchronized protected void clientDisconnected(ConnectionToClient client)
   {
@@ -86,15 +86,15 @@ public class ObservableOriginatorServer extends ObservableServer
 
   /**
    * Method called each time an exception is raised
-   * by a cuninghame.comp3415projectphase1.client connection.
+   * by a comp3415.cuninghame.client connection.
    * It notifies observers by sending an
    * <code> OriginatorMessage </code> instance
-   * containing a reference to that cuninghame.comp3415projectphase1.client and
+   * containing a reference to that comp3415.cuninghame.client and
    * the message defined by the static variable CLIENT_EXCEPTION
    * to which is appended the exception message.
    *
-   * @param client the cuninghame.comp3415projectphase1.client that raised the exception.
-   * @param Throwable the exception thrown.
+   * @param client the comp3415.cuninghame.client that raised the exception.
+   * @param exception the exception thrown.
    */
   synchronized protected void clientException(
     ConnectionToClient client, Throwable exception)

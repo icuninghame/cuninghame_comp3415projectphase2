@@ -1,4 +1,4 @@
-package cuninghame.comp3415projectphase2;
+package comp3415.cuninghame;
 
 /**
  * COMP 3415 Software Engineering

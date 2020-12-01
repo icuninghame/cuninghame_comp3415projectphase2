@@ -2,7 +2,7 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com
 
-package cuninghame.comp3415projectphase2.ocsf.server;
+package comp3415.cuninghame.ocsf.server;
 
 import java.util.*;
 import java.io.*;
@@ -24,17 +24,17 @@ public class ObservableServer extends Observable
   // Class variables ************************************************
 
   /**
-   * The string sent to the observers when a cuninghame.comp3415projectphase1.client has connected.
+   * The string sent to the observers when a comp3415.cuninghame.client has connected.
    */
   public static final String CLIENT_CONNECTED= "#OS:Client connected.";
 
   /**
-   * The string sent to the observers when a cuninghame.comp3415projectphase1.client has disconnected.
+   * The string sent to the observers when a comp3415.cuninghame.client has disconnected.
    */
   public static final String CLIENT_DISCONNECTED= "#OS:Client disconnected.";
 
   /**
-   * The string sent to the observers when an exception occurred with a cuninghame.comp3415projectphase1.client.
+   * The string sent to the observers when an exception occurred with a comp3415.cuninghame.client.
    * The error message of that exception will be appended to this string.
    */
   public static final String CLIENT_EXCEPTION= "#OS:Client exception.";
@@ -108,7 +108,7 @@ public class ObservableServer extends Observable
   }
 
   /**
-   * Sends a message to every cuninghame.comp3415projectphase1.client connected to the server.
+   * Sends a message to every comp3415.cuninghame.client connected to the server.
    *
    * @param msg   The message to be sent
    */
@@ -129,7 +129,7 @@ public class ObservableServer extends Observable
 
   /**
    * Returns an array of containing the existing
-   * cuninghame.comp3415projectphase1.client connections. This can be used by
+   * comp3415.cuninghame.client connections. This can be used by
    * concrete subclasses to implement messages that do something with
    * each connection (e.g. kill it, send a message to it etc.)
    *
@@ -196,10 +196,10 @@ public class ObservableServer extends Observable
   }
 
   /**
-   * Hook method called each time a new cuninghame.comp3415projectphase1.client connection is
+   * Hook method called each time a new comp3415.cuninghame.client connection is
    * accepted. The method may be overridden by subclasses.
    *
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client.
+   * @param client the connection connected to the comp3415.cuninghame.client.
    */
   protected synchronized void clientConnected(ConnectionToClient client) 
   {
@@ -208,10 +208,10 @@ public class ObservableServer extends Observable
   }
 
   /**
-   * Hook method called each time a cuninghame.comp3415projectphase1.client disconnects.
+   * Hook method called each time a comp3415.cuninghame.client disconnects.
    * The method may be overridden by subclasses.
    *
-   * @param client the connection with the cuninghame.comp3415projectphase1.client.
+   * @param client the connection with the comp3415.cuninghame.client.
    */
   protected synchronized void clientDisconnected(ConnectionToClient client) 
   {
@@ -221,12 +221,12 @@ public class ObservableServer extends Observable
 
   /**
    * Hook method called each time an exception
-   * is raised in a cuninghame.comp3415projectphase1.client thread.
+   * is raised in a comp3415.cuninghame.client thread.
    * This implementation simply closes the
-   * cuninghame.comp3415projectphase1.client connection, ignoring any exception.
+   * comp3415.cuninghame.client connection, ignoring any exception.
    * The method may be overridden by subclasses.
    *
-   * @param client the cuninghame.comp3415projectphase1.client that raised the exception.
+   * @param client the comp3415.cuninghame.client that raised the exception.
    * @param exception the exception raised.
    */
   protected synchronized void clientException(ConnectionToClient client,
@@ -289,15 +289,15 @@ public class ObservableServer extends Observable
   }
 
   /**
-   * This method is used to handle messages coming from the cuninghame.comp3415projectphase1.client.
+   * This method is used to handle messages coming from the comp3415.cuninghame.client.
    * Observers are notfied by receiveing the transmitted message.
    * Note that, in this implementation, the information concerning
-   * the cuninghame.comp3415projectphase1.client that sent the message is lost.
+   * the comp3415.cuninghame.client that sent the message is lost.
    * It can be overriden, but is still expected to call notifyObservers().
    *
-   * @param message The message received from the cuninghame.comp3415projectphase1.client.
-   * @param client The connection to the cuninghame.comp3415projectphase1.client.
-   * @see cuninghame.comp3415projectphase1.ocsf.server.ObservableOriginatorServer
+   * @param message The message received from the comp3415.cuninghame.client.
+   * @param client The connection to the comp3415.cuninghame.client.
+   * @see ObservableOriginatorServer
    */
   protected synchronized void handleMessageFromClient
     (Object message, ConnectionToClient client)

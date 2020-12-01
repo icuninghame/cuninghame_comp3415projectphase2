@@ -2,7 +2,7 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com 
 
-package cuninghame.comp3415projectphase2.ocsf.server;
+package comp3415.cuninghame.ocsf.server;
 
 /**
 * The <code> AdaptableServer </code> is an adapter class
@@ -28,7 +28,6 @@ class AdaptableServer extends AbstractServer
   /**
    * Constructs the server adapter.
    *
-   * @param  host  the server's host name.
    * @param  port  the port number.
    */
   public AdaptableServer(int port, ObservableServer server)
@@ -40,10 +39,10 @@ class AdaptableServer extends AbstractServer
 // OVERRIDDEN METHODS ---------
 
   /**
-   * Hook method called each time a new cuninghame.comp3415projectphase1.client connection is
+   * Hook method called each time a new comp3415.cuninghame.client connection is
    * accepted.
    *
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client.
+   * @param client the connection connected to the comp3415.cuninghame.client.
    */
   final protected void clientConnected(ConnectionToClient client)
   {
@@ -51,9 +50,9 @@ class AdaptableServer extends AbstractServer
   }
 
   /**
-   * Hook method called each time a cuninghame.comp3415projectphase1.client disconnects.
+   * Hook method called each time a comp3415.cuninghame.client disconnects.
    *
-   * @param client the connection with the cuninghame.comp3415projectphase1.client.
+   * @param client the connection with the comp3415.cuninghame.client.
    */
   final protected void clientDisconnected(ConnectionToClient client)
   {
@@ -62,9 +61,9 @@ class AdaptableServer extends AbstractServer
 
   /**
    * Hook method called each time an exception
-   * is raised in a cuninghame.comp3415projectphase1.client thread.
+   * is raised in a comp3415.cuninghame.client thread.
    *
-   * @param client the cuninghame.comp3415projectphase1.client that raised the exception.
+   * @param client the comp3415.cuninghame.client that raised the exception.
    * @param exception the exception raised.
    */
   final protected void clientException(ConnectionToClient client,
@@ -111,10 +110,10 @@ class AdaptableServer extends AbstractServer
   }
 
   /**
-   * Handles a command sent from the cuninghame.comp3415projectphase1.client to the server.
+   * Handles a command sent from the comp3415.cuninghame.client to the server.
    *
    * @param msg   the message sent.
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client that
+   * @param client the connection connected to the comp3415.cuninghame.client that
    *  sent the message.
    */
   final protected void handleMessageFromClient(Object msg,

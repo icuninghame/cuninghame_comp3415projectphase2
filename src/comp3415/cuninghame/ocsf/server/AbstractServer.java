@@ -2,7 +2,7 @@
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at www.lloseng.com 
 
-package cuninghame.comp3415projectphase2.ocsf.server;
+package comp3415.cuninghame.ocsf.server;
 
 import java.net.*;
 import java.io.*;
@@ -29,7 +29,7 @@ import java.io.*;
 * @author Fran&ccedil;ois B&eacute;langer
 * @author Paul Holden
 * @version February 2001 (2.12)
-* @see cuninghame.comp3415projectphase1.ocsf.server.ConnectionToClient
+* @see ConnectionToClient
 */
 public abstract class AbstractServer implements Runnable
 {
@@ -67,7 +67,7 @@ public abstract class AbstractServer implements Runnable
   private int backlog = 10;
 
   /**
-   * The thread group associated with cuninghame.comp3415projectphase1.client threads. Each member of the
+   * The thread group associated with comp3415.cuninghame.client threads. Each member of the
    * thread group is a <code> ConnectionToClient </code>.
    */
   private ThreadGroup clientThreadGroup;
@@ -216,7 +216,7 @@ public abstract class AbstractServer implements Runnable
 
   /**
    * Returns an array containing the existing
-   * cuninghame.comp3415projectphase1.client connections. This can be used by
+   * comp3415.cuninghame.client connections. This can be used by
    * concrete subclasses to implement messages that do something with
    * each connection (e.g. kill it, send a message to it etc.).
    * Remember that after this array is obtained, some clients
@@ -381,7 +381,7 @@ public abstract class AbstractServer implements Runnable
    * The method may be overridden by subclasses but should remains
    * synchronized.
    *
-   * @param client the cuninghame.comp3415projectphase1.client that raised the exception.
+   * @param client the comp3415.cuninghame.client that raised the exception.
    * @param exception the exception thrown.
    */
   synchronized protected void clientException(
@@ -420,14 +420,14 @@ public abstract class AbstractServer implements Runnable
   protected void serverClosed() {}
 
   /**
-   * Handles a command sent from one cuninghame.comp3415projectphase1.client to the server.
+   * Handles a command sent from one comp3415.cuninghame.client to the server.
    * This MUST be implemented by subclasses, who should respond to
    * messages.
    * This method is called by a synchronized method so it is also
    * implcitly synchronized.
    *
    * @param msg   the message sent.
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client that
+   * @param client the connection connected to the comp3415.cuninghame.client that
    *  sent the message.
    */
   protected abstract void handleMessageFromClient(
@@ -437,7 +437,7 @@ public abstract class AbstractServer implements Runnable
 // METHODS TO BE USED FROM WITHIN THE FRAMEWORK ONLY ----------------
 
   /**
-   * Receives a command sent from the cuninghame.comp3415projectphase1.client to the server.
+   * Receives a command sent from the comp3415.cuninghame.client to the server.
    * Called by the run method of <code>ConnectionToClient</code>
    * instances that are watching for messages coming from the server
    * This method is synchronized to ensure that whatever effects it has
@@ -445,7 +445,7 @@ public abstract class AbstractServer implements Runnable
    * simply calls the <code>handleMessageFromClient</code> slot method.
    *
    * @param msg   the message sent.
-   * @param client the connection connected to the cuninghame.comp3415projectphase1.client that
+   * @param client the connection connected to the comp3415.cuninghame.client that
    *  sent the message.
    */
   final synchronized void receiveMessageFromClient(
